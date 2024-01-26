@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  color: black;
+  font-family: 'MaisonNeue', sans-serif;
+  font-size: 17.5px;
+  transition: font-size 0.5s;
+}
