@@ -1,4 +1,5 @@
 .menu-bar {
+  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -29,6 +30,7 @@
 }
 
 .left-section {
+  align-items: center;
   display: flex;
   margin-right: 40px;
   cursor: pointer;
@@ -40,6 +42,14 @@
   vertical-align: middle;
   position: relative;
   overflow: hidden;
+  transition: all 0.5s;
+}
+
+.left-section img:hover {
+  padding: 2px;
+  border: 5px solid white;
+  box-shadow: 1px 1px 1px rgba(212, 212, 212, 0.4);
+  transition: 0.4s;
 }
 
 .overlay {

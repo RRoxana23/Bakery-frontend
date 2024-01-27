@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,6 +8,6 @@ import { RouterLink } from '@angular/router';
   templateUrl: './menu-bar.component.html',
   styleUrl: './menu-bar.component.css'
 })
-export class MenuBarComponent {
-
+export class MenuBarComponent{
+  
 }

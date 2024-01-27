@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { MenuPageComponent } from './menu-page/menu-page.component';
-import { AppComponent } from './app.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { DeliversPageComponent } from './delivers-page/delivers-page.component';
 import { LocationsPageComponent } from './locations-page/locations-page.component';
