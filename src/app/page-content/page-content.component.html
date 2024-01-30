@@ -1,0 +1,17 @@
+<main class="page-content" app-on-scroll>
+  <section #leftPart class="left-part">
+      <img [src]="pageContent.leftPhoto" alt="Our bakery">
+  </section>
+  <section #rightPart class="right-part">
+      <img [src]="pageContent.rightPhoto" alt="Christmas spirit">
+      <div class="home-title">
+          {{ pageContent.title }}
+      </div>
+      <div class="home-description">
+          {{ pageContent.description }}
+      </div>
+      <button class="order-now-button">
+          Order now
+      </button>
+    </section>
+</main>
