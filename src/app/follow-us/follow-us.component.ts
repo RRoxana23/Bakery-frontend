@@ -1,22 +1,11 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-follow-us',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './follow-us.component.html',
   styleUrl: './follow-us.component.css'
 })
 export class FollowUsComponent {
-
-  @Input()
-  goDown: boolean = false;
-
-  goDownInAbout(){
-    console.log(this.goDown);
-    if(this.goDown)
-      return 'below';
-    return undefined;
-  }
 }

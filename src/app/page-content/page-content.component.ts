@@ -29,9 +29,6 @@ export class PageContentComponent {
   @Input()
   aboutUsComponent: boolean = false;
 
-  @Input()
-  below: boolean = false;
-
   inAboutUs(){
     if(this.aboutUsComponent)
       return 'inAboutUs';

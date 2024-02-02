@@ -9,6 +9,5 @@ import { MenuBarComponent } from '../menu-bar/menu-bar.component';
   styleUrl: './locations-page.component.css'
 })
 export class LocationsPageComponent{
-
-
+  
 }

@@ -19,7 +19,7 @@ export class OnScrollDirective {
   }
 
   private adjustLayout(): void {
-    const menuBarHeight = (document.querySelector('.menu-bar') as HTMLElement)?.offsetHeight || 0;
+    const menuBarHeight = (document.querySelector('.navbar') as HTMLElement)?.offsetHeight || 0;
     const scrollPosition = window.scrollY;
 
     const leftPart = this.element.nativeElement.querySelector('.left-part');

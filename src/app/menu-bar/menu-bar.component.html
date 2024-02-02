@@ -1,21 +1,36 @@
-<main class="menu-bar">
+<nav class="navbar navbar-expand-md">
   <section class="left-section">
-    <div class="menu-bar-link">
-      <a routerLink="/" class="menu-bar-link">
+    <div class="logo-container">
+      <a href="/" class="nav-link">
         <img src="./assets/logo.png" alt="Logo Bakery">
       </a>
     </div>
   </section>
 
-  <section class="middle-section">
-    <a routerLink="/menu-page" class="menu-bar-link">Menu</a>
-    <a routerLink="/delivers-page" class="menu-bar-link">Delivers</a>
-    <a routerLink="/locations-page" class="menu-bar-link">Locations</a>
-  </section>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav middle-section">
+        <li class="nav-item">
+          <a href="/menu-page" class="nav-link">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a href="/delivers-page" class="nav-link">Delivers</a>
+        </li>
+        <li class="nav-item">
+          <a href="/locations-page" class="nav-link">Locations</a>
+        </li>
+      </ul>
 
-  <section class="right-section">
-    <a routerLink="/join-page" class="menu-bar-link">Join our team</a>
-    <a routerLink="/about-us-page" class="menu-bar-link">About Us</a>
-  </section>  
-</main>
-
+      <ul class="navbar-nav right-section">
+        <li class="nav-item">
+          <a href="/join-page" class="nav-link">Join our team</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about-us-page" class="nav-link">About Us</a>
+        </li>
+      </ul>
+  </div>
+</nav>

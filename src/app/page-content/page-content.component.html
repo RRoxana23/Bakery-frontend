@@ -5,25 +5,28 @@
     <img [src]="pageContent.leftPhoto" alt="Our bakery">
   </section>
 
-  <section class="right-part"
-    [ngClass]="inAboutUs()">
-    @if(pageContent.rightPhoto){
-      <img [src]="pageContent.rightPhoto" alt="Christmas spirit">
-    }
-
-    <div class="home-title">
-      {{ pageContent.title }}
-    </div>
-
-    <div class="home-description">
-      {{ pageContent.description }} 
-      <ng-content></ng-content>
-    </div>
+  <section class="right-part">
+    <div class="right-part-content"
+      [ngClass]="inAboutUs()">
+        @if(pageContent.rightPhoto){
+          <img [src]="pageContent.rightPhoto" alt="Christmas spirit">
+        }
     
-    @if(showOrderButton){
-      <button class="order-now-button">
-          Order now
-      </button>
-    }
-    </section>
+        <div class="home-title">
+          {{ pageContent.title }}
+        </div>
+    
+        <div class="home-description">
+          {{ pageContent.description }} 
+          <ng-content></ng-content>
+        </div>
+        
+        @if(showOrderButton){
+          <button class="order-now-button">
+              Order now
+          </button>
+        }
+    </div>
+    <app-follow-us></app-follow-us>
+  </section>
 </main>
