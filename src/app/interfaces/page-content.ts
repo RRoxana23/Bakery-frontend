@@ -1,6 +1,6 @@
 export interface PageContent {
   leftPhoto: string;
-  rightPhoto: string;
+  rightPhoto?: string;
   title: string;
-  description: string;
+  description?: string;
 }

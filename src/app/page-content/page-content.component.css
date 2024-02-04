@@ -1,7 +1,6 @@
 .page-content {
   display: flex;
   flex-direction: row;
-  height: 100vh;
 }
 
 .left-part {
@@ -21,32 +20,51 @@
   width: 65%;
 }
 
-.right-part > *:not(img) {
-  margin: 30px 60px 0 60px;
+.right-part-content{
+  width: 100%;
 }
 
-.right-part img {
-  width: 92%;
-  height: 50vh;
+.right-part-content > *:not(img) {
+  margin: 2.7% 8% 0 8%;
+}
+
+.right-part-content img {
+  width: 88%;
+  height: 46vh;
   min-height: 300px;
-  margin: 0 4% 0 4%;
-  border-radius: 6%;
+  margin: 0 6% 0 6%;
+  border-radius: 8%;
 }
 
-.home-title{
+.right-part-content.inAboutUs {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .home-title {
+    font-size: 45px;
+  }
+  .home-description {
+    margin: 3% 11% 0 11%;
+  }
+}
+
+.home-title {
   font-size: 28px;
   margin: 7.5% 15% 0 7.5%;
 }
 
-.home-description{
+.home-description {
   color: #696969;
 }
 
-.order-now-button {
+.right-part-content .order-now-button {
   background-color: white;
   border: 2px solid #cf743f;
   padding: 7px 12px 7px 12px;
-  margin-bottom: 8%;
+  margin: 2.7% 8% 2.7% 8%;
   color: #cf743f;
   text-align: center;
   font-size: 13px;
@@ -55,27 +73,22 @@
   cursor: pointer;
 }
 
-.order-now-button:hover{
+.right-part-content .order-now-button:hover {
   background-color: #cf743f;
   color: white;
 }
 
 @media screen and (max-width: 1024px)
 {
-  .left-part{
+  .left-part {
     display: none;
   }
 
-  .right-part{
+  .right-part {
     width: 100%;
   }
 
-  .home-title{
+  .home-title {
    font-size: 22px;
   }
-}
-
-.about-us-title{
-  font-size: 35px;
-  text-align: center;
 }

@@ -1,17 +1,32 @@
+<app-menu-bar></app-menu-bar>
+
 <main class="page-content" app-on-scroll>
-  <section #leftPart class="left-part">
-      <img [src]="pageContent.leftPhoto" alt="Our bakery">
+  <section class="left-part">
+    <img [src]="pageContent.leftPhoto" alt="Our bakery">
   </section>
-  <section #rightPart class="right-part">
-      <img [src]="pageContent.rightPhoto" alt="Christmas spirit">
-      <div class="home-title">
+
+  <section class="right-part">
+    <div class="right-part-content"
+      [ngClass]="inAboutUs()">
+        @if(pageContent.rightPhoto){
+          <img [src]="pageContent.rightPhoto" alt="Christmas spirit">
+        }
+    
+        <div class="home-title">
           {{ pageContent.title }}
-      </div>
-      <div class="home-description">
-          {{ pageContent.description }}
-      </div>
-      <button class="order-now-button">
-          Order now
-      </button>
-    </section>
+        </div>
+    
+        <div class="home-description">
+          {{ pageContent.description }} 
+          <ng-content></ng-content>
+        </div>
+        
+        @if(showOrderButton){
+          <button class="order-now-button">
+              Order now
+          </button>
+        }
+    </div>
+    <app-follow-us></app-follow-us>
+  </section>
 </main>

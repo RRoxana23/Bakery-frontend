@@ -5,11 +5,12 @@ import { DeliversPageComponent } from './delivers-page/delivers-page.component';
 import { LocationsPageComponent } from './locations-page/locations-page.component';
 import { JoinPageComponent } from './join-page/join-page.component';
 import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
+import { PageContentComponent } from './page-content/page-content.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: MenuBarComponent,
+    component: PageContentComponent,
     title: 'Bakery',
   },
   {
