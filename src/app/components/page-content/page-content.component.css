@@ -44,10 +44,22 @@
   align-items: center;
 
   .home-title {
-    font-size: 45px;
+    font-size: 6.1vh;
   }
   .home-description {
+    font-size: 2.5vh;
     margin: 3% 11% 0 11%;
+  }
+
+  @media screen and (max-width: 1024px)
+  {
+    .home-title {
+      font-size: 40px;
+    }
+
+    .home-description {
+      font-size: 16px;
+    }
   }
 }
 
@@ -61,15 +73,15 @@
 }
 
 .right-part-content .order-now-button {
-  background-color: white;
-  border: 2px solid #cf743f;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
   padding: 7px 12px 7px 12px;
   margin: 2.7% 8% 2.7% 8%;
   color: #cf743f;
-  text-align: center;
-  font-size: 13px;
-  font-weight: bold;
+  border: 2px solid #cf743f;
   border-radius: 20px;
+  background-color: white;
   cursor: pointer;
 }
 

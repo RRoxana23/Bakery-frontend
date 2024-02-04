@@ -1,0 +1,65 @@
+:host {
+  --follow-us-color: #b20838; /* Valoarea implicită, în caz că nu este setată dinamic */
+}
+
+.title {
+  font-size: 4vh;
+  text-align: center;
+  margin-bottom: 0.1em;
+}
+
+.message {
+  font-size: 2.4vh;
+  text-align: center;
+  margin-bottom: 1.3em;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.icon {
+  height: 6vh;
+  padding: 0.5em;
+  margin-right: 1.5em;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #b20838;
+}
+
+.icon:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; 
+}
+
+.icon:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1024px)
+{
+  .title {
+    font-size: 25px;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+
+  .icon{
+    height: 40px;
+  }
+}

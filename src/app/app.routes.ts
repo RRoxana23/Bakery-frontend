@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { MenuPageComponent } from './menu-page/menu-page.component';
-import { MenuBarComponent } from './menu-bar/menu-bar.component';
-import { DeliversPageComponent } from './delivers-page/delivers-page.component';
-import { LocationsPageComponent } from './locations-page/locations-page.component';
-import { JoinPageComponent } from './join-page/join-page.component';
-import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
-import { PageContentComponent } from './page-content/page-content.component';
+import { MenuPageComponent } from './components/menu-page/menu-page.component';
+import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import { DeliversPageComponent } from './components/delivers-page/delivers-page.component';
+import { LocationsPageComponent } from './components/locations-page/locations-page.component';
+import { JoinPageComponent } from './components/join-page/join-page.component';
+import { AboutUsPageComponent } from './components/about-us-page/about-us-page.component';
+import { PageContentComponent } from './components/page-content/page-content.component';
 
 export const routes: Routes = [
   {
