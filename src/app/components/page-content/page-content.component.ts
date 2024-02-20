@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { OnScrollDirective } from '../../directives/on-scroll.directive';
 import { PageContent } from '../../interfaces/page-content';
-import { MenuBarComponent } from "../menu-bar/menu-bar.component";
 import { CommonModule } from '@angular/common';
 import { FollowUsComponent } from "../follow-us/follow-us.component";
+import { MenuBarComponent } from '../menu-bar/menu-bar.component';
 
 @Component({
     selector: 'app-page-content',
