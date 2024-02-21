@@ -1,0 +1,40 @@
+<div class="title" mat-dialog-title>{{ data.product.title }}</div>
+
+<div class="popup">
+
+  <mat-dialog-content class="mat-typography">
+
+    <div class="left-section">
+      @if (data.category == "Pastry"){
+
+        <img mat-card-image [src]="data.product.image" alt="Product">
+      }
+      @else {
+
+        <img mat-card-image [src]="data.product.imagePopup" alt="Product">
+      }
+
+      <div class="below-image-section">
+        <div class="quantity-control">
+          <button mat-button-toggle class="decrease-button" (click)="decreaseQuantity()">-</button>
+          <span class="quantity">{{ quantity }}</span>
+          <button mat-button-toggle class="increase-button" (click)="increaseQuantity()">+</button>
+        </div>
+        <mat-icon fontIcon="favorite_border" aria-hidden="false" color="warn">favorite_border</mat-icon>
+      </div>
+
+    </div>
+    <div class="right-section">
+      <p class="description"> {{data.product.description}} </p>
+      <p class="ingredients"> <i> Ingredients: {{data.product.ingredients}}</i> </p>
+      <p class="price"> €{{data.product.price}} </p>
+    </div>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close cdkFocusInitial>Back</button>
+    <button mat-raised-button class="add-to-cart-button" color="warn">Add to cart</button>
+  </mat-dialog-actions>
+
+</div>

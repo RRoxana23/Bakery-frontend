@@ -15,8 +15,11 @@
   </mat-card-content>
 
   <mat-card-actions>
-    <button mat-raised-button class="see-more-button" color="warn">See more</button>
-    <mat-icon fontIcon="shopping_cart" aria-hidden="false">shopping_cart</mat-icon>
+    <button mat-raised-button class="see-more-button" color="warn" (click)="openDialog()">See more</button>
+    <div class="icons">
+      <mat-icon fontIcon="favorite_border" aria-hidden="false">favorite_border</mat-icon>
+      <mat-icon fontIcon="shopping_cart" aria-hidden="false">shopping_cart</mat-icon>
+    </div>
   </mat-card-actions>
 
 </mat-card>
