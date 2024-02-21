@@ -1,0 +1,22 @@
+<mat-card class="card">
+  
+  <mat-card-header>
+    <mat-card-title class="title"> 
+      {{ product.title }}
+    </mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image [src]="product.image" alt="Product">
+  <mat-card-content class="content">
+    
+    <div class="price">
+      €{{ product.price }}
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button class="see-more-button" color="warn">See more</button>
+    <mat-icon fontIcon="shopping_cart" aria-hidden="false">shopping_cart</mat-icon>
+  </mat-card-actions>
+
+</mat-card>

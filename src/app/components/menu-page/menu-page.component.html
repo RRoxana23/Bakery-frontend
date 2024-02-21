@@ -1,3 +1,58 @@
 <app-menu-bar></app-menu-bar>
-<p>menu-page works!</p>
-<p>buna</p>
+
+<div class="images-container">
+  <div class="left-container">
+    <img class="mySlides" src="./assets/pic1-slide.jpg">
+    <img class="mySlides" src="./assets/pic2-slide.jpg">
+    <img class="mySlides" src="./assets/pic3-slide.jpg">
+  </div>
+  
+  <div class="right-container">
+    <div class="products-container">
+      <img class="mySlides" src="./assets/pic4-slide.jpg">
+      <img class="mySlides" src="./assets/pic5-slide.jpg">
+      <img class="mySlides" src="./assets/pic6-slide.jpg">
+    </div>
+    
+    <div class="products-container">
+      <img class="mySlides" src="./assets/pic7-slide.jpg">
+      <img class="mySlides" src="./assets/pic8-slide.jpg">
+      <img class="mySlides" src="./assets/pic9-slide.jpg">
+    </div>
+  </div>
+</div>
+
+<div class="header-list-products">
+  <mat-form-field class="select-box" color="warn" appearance="outline">
+    <mat-label>Sort by</mat-label>
+    <mat-select hideSingleSelectionIndicator>
+        <mat-option> None </mat-option>
+        <mat-option value = "2" > Reccomended </mat-option>
+        <mat-option value = "3" > Lowest Price </mat-option>
+        <mat-option value = "4" > Highest Price </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-paginator class="paginator" 
+                [length]="100"
+                [pageSize]="10"
+                [pageSizeOptions]="[5, 10, 25, 100]"
+                aria-label="Select page">
+  </mat-paginator>
+</div>
+
+<div class="menu">
+
+  <div class="products-list">
+  
+    @for(product of products; track product.id){
+
+      <app-product [product]="product"></app-product>
+      
+    }
+
+  </div>
+  
+</div>
+
+<app-follow-us></app-follow-us>

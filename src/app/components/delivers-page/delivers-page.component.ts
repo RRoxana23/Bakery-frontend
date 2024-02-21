@@ -9,6 +9,7 @@ import { FollowUsComponent } from "../follow-us/follow-us.component";
     styleUrl: './delivers-page.component.css',
     imports: [MenuBarComponent, FollowUsComponent]
 })
+
 export class DeliversPageComponent {
 
-}
+  }
