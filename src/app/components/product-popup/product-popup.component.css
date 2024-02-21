@@ -1,0 +1,129 @@
+.title{
+  font-size: 2vw;
+  align-self: center;
+  padding: 1em;
+}
+
+.popup{
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 45vw;
+}
+
+.mat-typography{
+  display: flex;
+  flex-direction: row;
+  margin: 0 1.5em 0 1.5em;
+}
+
+.left-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1.2em;
+}
+
+img{
+  height: 55vh;
+  width: 15vw;
+  margin-bottom: 1.5em;
+  object-fit: cover;
+}
+
+.below-image-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.quantity {
+  margin: 0 0.5em;
+  font-size: 16px;
+  color: black;
+}
+
+.decrease-button,
+.increase-button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.decrease-button:hover,
+.increase-button:hover {
+  background-color: #f0f0f0;
+}
+
+.right-section{
+  margin: 1em;
+}
+
+.description{
+  font-size: 1.3vw;
+  margin-bottom: 1.4em;
+  line-height: 1.5em;
+  color: black;
+}
+
+.ingredients{
+  font-size: 1.05vw;
+  margin-bottom: 1.4em;
+}
+
+.price{
+  font-size: 1.1vw;
+  color: black;
+}
+
+@media (max-width: 1100px){
+  .popup{
+    width: 80vw;
+  }
+
+  img{
+    height: 64vh;
+    width: 22vw;
+  }
+
+  .title{
+    font-size: 30px;
+  }
+
+  .description, .price{
+    font-size: 16px;
+  }
+
+  .ingredients{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px){
+  .mat-typography{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left-section{
+    height: 90%;
+  }
+
+  .right-section{
+    height: 10%;
+  }
+
+  img{
+    height: 75%;
+    width: 25vw;
+  }
+}

@@ -2,28 +2,28 @@
 
 <div class="images-container">
   <div class="left-container">
-    <img class="mySlides" src="./assets/pic1-slide.jpg">
-    <img class="mySlides" src="./assets/pic2-slide.jpg">
-    <img class="mySlides" src="./assets/pic3-slide.jpg">
+    <img class="mySlides" src="./assets/slides/pic1-slide.jpg">
+    <img class="mySlides" src="./assets/slides/pic2-slide.jpg">
+    <img class="mySlides" src="./assets/slides/pic3-slide.jpg">
   </div>
   
   <div class="right-container">
     <div class="products-container">
-      <img class="mySlides" src="./assets/pic4-slide.jpg">
-      <img class="mySlides" src="./assets/pic5-slide.jpg">
-      <img class="mySlides" src="./assets/pic6-slide.jpg">
+      <img class="mySlides" src="./assets/slides/pic4-slide.jpg">
+      <img class="mySlides" src="./assets/slides/pic5-slide.jpg">
+      <img class="mySlides" src="./assets/slides/pic6-slide.jpg">
     </div>
     
     <div class="products-container">
-      <img class="mySlides" src="./assets/pic7-slide.jpg">
-      <img class="mySlides" src="./assets/pic8-slide.jpg">
-      <img class="mySlides" src="./assets/pic9-slide.jpg">
+      <img class="mySlides" src="./assets/slides/pic7-slide.jpg">
+      <img class="mySlides" src="./assets/slides/pic8-slide.jpg">
+      <img class="mySlides" src="./assets/slides/pic9-slide.jpg">
     </div>
   </div>
 </div>
 
 <div class="header-list-products">
-  <mat-form-field class="select-box" color="warn" appearance="outline">
+  <mat-form-field class="select-box" color="warn" appearance="outline" subscriptSizing="dynamic">
     <mat-label>Sort by</mat-label>
     <mat-select hideSingleSelectionIndicator>
         <mat-option> None </mat-option>
@@ -32,23 +32,45 @@
         <mat-option value = "4" > Highest Price </mat-option>
     </mat-select>
   </mat-form-field>
+
+  <div appSmallerScreen class="filter-buttons">
+    <div class="button outline" color="warn" (click)="showPastryList()">Pastry</div>
+    <div class="button outline" color="warn" (click)="showCoffeeList()">Coffees</div>
+  </div>
   
-  <mat-paginator class="paginator" 
+  <mat-paginator class="paginator" color="warn"
                 [length]="100"
                 [pageSize]="10"
                 [pageSizeOptions]="[5, 10, 25, 100]"
                 aria-label="Select page">
   </mat-paginator>
+
+</div>
+
+<div appSmallerScreen class="filter-buttons-small">
+  <div class="button outline" color="warn" (click)="showPastryList()">Pastry</div>
+  <div class="button outline" color="warn" (click)="showCoffeeList()">Coffees</div>
 </div>
 
 <div class="menu">
 
   <div class="products-list">
   
-    @for(product of products; track product.id){
+    @if (this.selectedCategory == "Pastry"){
 
-      <app-product [product]="product"></app-product>
-      
+      @for (product of pastry; track product.id){
+
+        <app-product [product]="product" [category]="this.selectedCategory"></app-product>
+        
+      }
+    }
+    @else {
+
+      @for (product of coffees; track product.id){
+
+        <app-product [product]="product" [category]="this.selectedCategory"></app-product>
+        
+      }
     }
 
   </div>

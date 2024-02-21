@@ -1,6 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { MenuBarComponent } from '../menu-bar/menu-bar.component';
-import { ProductsConstants } from '../../constants/products-constants';
+import { PastryConstants } from '../../constants/pastry-constants';
+import { CoffeesConstants } from '../../constants/coffees-constants';
 import { ProductComponent } from "../product/product.component";
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -8,6 +9,8 @@ import { FollowUsComponent } from "../follow-us/follow-us.component";
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { CommonModule } from '@angular/common';
+import { SmallerScreenDirective } from '../../directives/smaller-screen.directive';
 
 
 @Component({
@@ -15,7 +18,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     standalone: true,
     templateUrl: './menu-page.component.html',
     styleUrl: './menu-page.component.css',
-    imports: [MenuBarComponent, ProductComponent, MatCardModule, MatButtonModule, FollowUsComponent, MatFormFieldModule, MatSelectModule, MatPaginatorModule]
+    imports: [MenuBarComponent, ProductComponent, MatCardModule, MatButtonModule, FollowUsComponent, MatFormFieldModule, MatSelectModule, MatPaginatorModule, CommonModule, SmallerScreenDirective]
 })
 export class MenuPageComponent implements OnInit, OnDestroy{
 
@@ -23,7 +26,13 @@ export class MenuPageComponent implements OnInit, OnDestroy{
   private slideInterval2: any;
   private slideInterval3: any;
 
-  products = ProductsConstants.PRODUCTS;
+  pastry = PastryConstants.PASTRY;
+  coffees = CoffeesConstants.COFFEES;
+
+  selectedCategory: string = "Pastry";
+
+  @Input()
+  smallerScreen: boolean = false;
 
   ngOnInit(): void {
     this.carousel1();
@@ -98,5 +107,19 @@ export class MenuPageComponent implements OnInit, OnDestroy{
     };
 
     this.slideInterval3 = setInterval(slideShow, 2000);
+  }
+
+  showPastryList(): void{
+    this.selectedCategory = "Pastry";
+  }
+
+  showCoffeeList(): void{
+    this.selectedCategory = "Coffees";
+  }
+
+  isScreenSmaller(){
+    if(this.smallerScreen)
+      return 'smallerScreen';
+    return undefined;
   }
 }
