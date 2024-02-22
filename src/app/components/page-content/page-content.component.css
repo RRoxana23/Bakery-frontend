@@ -34,6 +34,7 @@
   min-height: 300px;
   margin: 0 6% 0 6%;
   border-radius: 8%;
+  object-fit: cover;
 }
 
 .right-part-content.inAboutUs {
@@ -98,6 +99,10 @@
 
   .right-part {
     width: 100%;
+  }
+
+  .right-part-content img {
+    height: 25vh;
   }
 
   .home-title {

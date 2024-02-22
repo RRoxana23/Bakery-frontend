@@ -7,7 +7,7 @@
 .popup{
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: 80vh;
   width: 45vw;
 }
 
@@ -62,6 +62,10 @@ img{
 .decrease-button:hover,
 .increase-button:hover {
   background-color: #f0f0f0;
+}
+
+.fav-icon:hover{
+  cursor: pointer;
 }
 
 .right-section{

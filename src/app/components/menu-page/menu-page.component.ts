@@ -117,6 +117,18 @@ export class MenuPageComponent implements OnInit, OnDestroy{
     this.selectedCategory = "Coffees";
   }
 
+  isPastryClicked(){
+    if(this.selectedCategory == "Pastry")
+      return 'category-clicked';
+    return 'undefined';
+  }
+
+  isCoffeesClicked(){
+    if(this.selectedCategory == "Coffees")
+      return 'category-clicked';
+    return 'undefined';
+  }
+
   isScreenSmaller(){
     if(this.smallerScreen)
       return 'smallerScreen';

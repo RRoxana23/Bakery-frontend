@@ -21,6 +21,8 @@ export class ProductComponent {
   @Input()
   category!: string;
 
+  isHovered: boolean = false;
+
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
@@ -30,5 +32,13 @@ export class ProductComponent {
         category: this.category
       }
     });
+  }
+
+  onMouseOver() {
+    this.isHovered = true;
+  }
+
+  onMouseOut() {
+    this.isHovered = false;
   }
 }
