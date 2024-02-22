@@ -1,3 +1,8 @@
 <app-menu-bar></app-menu-bar>
-<p>locations-page works!</p>
-<p>buna</p>
+
+<p-dropdown [options]="cities" 
+            [(ngModel)]="selectedCity" 
+            placeholder="Select a City"
+            [editable]="true" 
+            optionLabel="name"> 
+</p-dropdown>

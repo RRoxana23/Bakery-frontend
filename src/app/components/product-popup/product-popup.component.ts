@@ -19,6 +19,8 @@ export class ProductPopupComponent {
 
   quantity: number = 1;
 
+  isHovered: boolean = false;
+
   increaseQuantity(): void {
     ++this.quantity;
   }
@@ -27,5 +29,13 @@ export class ProductPopupComponent {
     if (this.quantity > 1) {
       --this.quantity;
     }
+  }
+
+  onMouseOver() {
+    this.isHovered = true;
+  }
+
+  onMouseOut() {
+    this.isHovered = false;
   }
 }

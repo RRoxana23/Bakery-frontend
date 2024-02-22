@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
 import { MenuPageComponent } from './components/menu-page/menu-page.component';
-import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
-import { DeliversPageComponent } from './components/delivers-page/delivers-page.component';
 import { LocationsPageComponent } from './components/locations-page/locations-page.component';
 import { JoinPageComponent } from './components/join-page/join-page.component';
 import { AboutUsPageComponent } from './components/about-us-page/about-us-page.component';
 import { PageContentComponent } from './components/page-content/page-content.component';
+import { ShoppingCartPageComponent } from './components/shopping-cart-page/shopping-cart-page.component';
+import { MyAccountPageComponent } from './components/my-account-page/my-account-page.component';
 
 export const routes: Routes = [
   {
@@ -17,11 +17,6 @@ export const routes: Routes = [
     path: 'menu-page',
     component: MenuPageComponent,
     title: 'Menu',
-  },
-  {
-    path: 'delivers-page',
-    component: DeliversPageComponent,
-    title: 'Delivers'
   },
   {
     path: 'locations-page',
@@ -36,6 +31,16 @@ export const routes: Routes = [
   {
     path: 'about-us-page',
     component: AboutUsPageComponent,
-    title: 'About Us',
+    title: 'About us',
+  },
+  {
+    path: 'shopping-cart-page',
+    component: ShoppingCartPageComponent,
+    title: 'Shopping cart',
+  },
+  {
+    path: 'my-account-page',
+    component: MyAccountPageComponent,
+    title: 'My account',
   },
 ];

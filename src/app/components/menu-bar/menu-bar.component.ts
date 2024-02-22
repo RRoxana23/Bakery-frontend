@@ -1,10 +1,11 @@
 import { Component} from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-menu-bar',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, MatIcon],
   templateUrl: './menu-bar.component.html',
   styleUrl: './menu-bar.component.css'
 })

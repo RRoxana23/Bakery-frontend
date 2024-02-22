@@ -34,8 +34,8 @@
   </mat-form-field>
 
   <div appSmallerScreen class="filter-buttons">
-    <div class="button outline" color="warn" (click)="showPastryList()">Pastry</div>
-    <div class="button outline" color="warn" (click)="showCoffeeList()">Coffees</div>
+    <div class="category-button" [ngClass]="isPastryClicked()" color="warn" (click)="showPastryList()">Pastry</div>
+    <div class="category-button" [ngClass]="isCoffeesClicked()" color="warn" (click)="showCoffeeList()">Coffees</div>
   </div>
   
   <mat-paginator class="paginator" color="warn"
@@ -48,8 +48,8 @@
 </div>
 
 <div appSmallerScreen class="filter-buttons-small">
-  <div class="button outline" color="warn" (click)="showPastryList()">Pastry</div>
-  <div class="button outline" color="warn" (click)="showCoffeeList()">Coffees</div>
+  <div class="category-button" [ngClass]="isPastryClicked()" color="warn" (click)="showPastryList()">Pastry</div>
+  <div class="category-button" [ngClass]="isCoffeesClicked()" color="warn" (click)="showCoffeeList()">Coffees</div>
 </div>
 
 <div class="menu">
