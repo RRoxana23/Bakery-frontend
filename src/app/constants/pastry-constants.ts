@@ -2,7 +2,7 @@ import { Product } from "../interfaces/product";
 
 export class PastryConstants {
     
-  public static PASTRY: Product[] = [ 
+  public static readonly PASTRY: Product[] = [ 
 
     {
       id: 1,

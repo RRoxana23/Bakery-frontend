@@ -1,0 +1,61 @@
+.title{
+  padding: 1.3em 0 1.1em 0;
+  font-size: 1.3em;
+  color: black;
+}
+
+.fields{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field,
+.single-line-field{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  padding-right: 1em;
+  color: black
+}
+
+.single-line-field{
+  flex-basis: 100%;
+}
+
+.below-date-field{
+  margin-top: 0.5em;
+}
+
+.field-description{
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.required-field{
+  display: inline-block;
+  color: #c02b0a;
+  font-size: 0.8em;
+  padding-left: 0.125em;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-upload{
+  display: flex;
+  align-items: center;
+  margin: 0.4em 0 2em 0;
+}
+
+.upload-message{
+  padding-left: 0.5em;
+}
+
+@media (max-width: 800px){
+  
+  .field{
+    flex-basis: 100%;
+  }
+}
