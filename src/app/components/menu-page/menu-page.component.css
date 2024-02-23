@@ -90,14 +90,15 @@
   display: flex;
   margin: 1vw 5% 5% 5%;
   padding: 2.5rem 0 0 2.5rem;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background-color: #f3e7df;
 }
 
 .products-list{
   display: flex;
   flex-wrap: wrap;
+  align-items: start;
   justify-content: space-between;
 }
 

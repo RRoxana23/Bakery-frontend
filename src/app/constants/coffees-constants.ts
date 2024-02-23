@@ -2,7 +2,7 @@ import { Product } from "../interfaces/product";
 
 export class CoffeesConstants {
     
-  public static COFFEES: Product[] = [ 
+  public static readonly COFFEES: Product[] = [ 
 
     {
       id: 1,
