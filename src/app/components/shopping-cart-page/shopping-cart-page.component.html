@@ -1,2 +1,13 @@
-<app-menu-bar></app-menu-bar>
-<p>shopping-cart-page works!</p>
+<app-page-content [pageContent]="shoppingCart" [showOrderButton]="false" [littleContent]="this.empty? true:false">
+  <div class="page-description">
+    @if (empty){
+      <h2 class="black-c title">Your Shopping Cart is empty!</h2>
+      <h4 class="black-c"> Check out our <a class="link-to-menu" href="/menu-page">shop</a> to see what's available.</h4>
+    } 
+    @else {
+      <app-shopping-cart-product></app-shopping-cart-product>
+      <app-shopping-cart-product></app-shopping-cart-product>
+      <app-shopping-cart-product></app-shopping-cart-product>
+    }
+  </div>
+</app-page-content>

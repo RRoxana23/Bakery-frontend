@@ -11,3 +11,7 @@ body {
   line-height: var(--bs-body-line-height) !important;
   transition: font-size 0.5s;
 }
+
+.black-c{
+  color: black;
+}

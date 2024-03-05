@@ -13,7 +13,6 @@ import { MenuBarComponent } from '../menu-bar/menu-bar.component';
     imports: [OnScrollDirective, MenuBarComponent, CommonModule, FollowUsComponent]
 })
 export class PageContentComponent {
-  constructor() {}
 
   @Input()
   pageContent: PageContent = {
@@ -27,11 +26,8 @@ export class PageContentComponent {
   showOrderButton: boolean = true;
 
   @Input()
-  aboutUsComponent: boolean = false;
+  centeredComponent: boolean = false;
 
-  inAboutUs(){
-    if(this.aboutUsComponent)
-      return 'inAboutUs';
-    return undefined;
-  }
+  @Input()
+  littleContent: boolean = false;
 }

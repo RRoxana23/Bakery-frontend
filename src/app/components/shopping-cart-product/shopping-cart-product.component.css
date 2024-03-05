@@ -1,0 +1,57 @@
+.card{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
+
+.left-section{
+  width: 20%;
+}
+
+.left-section img{
+  height: 20vh;
+  width: 7.3vw;
+}
+
+.right-section{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-sect-header,
+.right-sect-bottom{
+  display: flex;
+  align-items: center;
+  padding: 0.2em 0 0.6em 0;
+}
+
+.title{
+  font-size: 1.5em;
+}
+
+.delete-icon{
+  margin-left: auto;
+  padding-right: 1.1em;
+}
+
+.delete-icon{
+  font-size: 30px;
+  height: 30px;
+  color: gray;
+}
+
+.delete-icon:hover{
+  cursor: pointer;
+}
+
+.right-sect-bottom{
+  margin-top: auto;
+}
+
+.total{
+  margin-left: auto;
+  font-size: 1.1em;
+}
