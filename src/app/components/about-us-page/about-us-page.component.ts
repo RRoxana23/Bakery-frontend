@@ -12,8 +12,6 @@ import { PageContentComponent } from "../page-content/page-content.component";
 })
 export class AboutUsPageComponent {
 
-  constructor(){}
-
   aboutUs: PageContent = {
     leftPhoto: './assets/founders.jpg',
     title: 'Meet our founders!'

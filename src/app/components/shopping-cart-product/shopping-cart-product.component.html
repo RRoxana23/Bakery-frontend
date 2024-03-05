@@ -1,0 +1,17 @@
+<mat-card class="card">
+  <div class="left-section">
+    <img src="./assets/pastry/tiramisu.jpg">
+  </div>
+  <div class="right-section">
+    <div class="right-sect-header">
+      <div class="title">Tiramisu</div>
+      <mat-icon class="delete-icon" [fontIcon]="isHovered? 'delete' : 'delete_outline'" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()" aria-hidden="false">delete</mat-icon>
+    </div>
+    <div class="price"> €5.99</div>
+    <div class="right-sect-bottom">
+      <app-quantity-control></app-quantity-control>
+      <div class="total"><b>Total: </b> €5.99</div>
+    </div>
+  </div>
+  
+</mat-card>

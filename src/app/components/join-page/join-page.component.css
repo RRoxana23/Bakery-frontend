@@ -1,3 +1,10 @@
+.page-description,
+.field,
+.single-line-field{
+  display: flex;
+  flex-direction: column;
+}
+
 .title{
   padding: 1.3em 0 1.1em 0;
   font-size: 1.3em;
@@ -11,8 +18,6 @@
 
 .field,
 .single-line-field{
-  display: flex;
-  flex-direction: column;
   flex-basis: 50%;
   padding-right: 1em;
   color: black
@@ -33,10 +38,9 @@
 }
 
 .required-field{
-  display: inline-block;
-  color: #c02b0a;
   font-size: 0.8em;
   padding-left: 0.125em;
+  color: #c02b0a;
 }
 
 .file-input {
@@ -46,11 +50,16 @@
 .file-upload{
   display: flex;
   align-items: center;
-  margin: 0.4em 0 2em 0;
+  margin: 0.4em 0 1em 0;
 }
 
 .upload-message{
   padding-left: 0.5em;
+}
+
+.submit-button{
+  width: 8em;
+  margin: 0 1em 4em auto;
 }
 
 @media (max-width: 800px){

@@ -2,21 +2,21 @@
 
 <main class="page-content" app-on-scroll>
   <section class="left-part">
-    <img [src]="pageContent.leftPhoto" alt="Our bakery">
+      <img [src]="pageContent.leftPhoto" alt="Our bakery">
   </section>
 
   <section class="right-part">
     <div class="right-part-content"
-      [ngClass]="inAboutUs()">
+      [ngClass]="{'centered': this.centeredComponent, 'footer': this.littleContent}">
         @if(pageContent.rightPhoto){
           <img [src]="pageContent.rightPhoto" alt="Christmas spirit">
         }
     
-        <div class="home-title">
+        <div class="page-title">
           {{ pageContent.title }}
         </div>
     
-        <div class="home-description">
+        <div class="page-description">
           {{ pageContent.description }} 
           <ng-content></ng-content>
         </div>
@@ -27,6 +27,6 @@
           </button>
         }
     </div>
-    <app-follow-us></app-follow-us>
+    <app-follow-us [ngClass]="{'footer': this.littleContent}"></app-follow-us>
   </section>
 </main>

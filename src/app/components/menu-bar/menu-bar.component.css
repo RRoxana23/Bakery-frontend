@@ -10,8 +10,8 @@
 
 .nav-link {
   position: relative;
-  color: black;
   text-decoration: none;
+  color: black;
 }
 
 .navbar-expand-md .navbar-nav .nav-link{

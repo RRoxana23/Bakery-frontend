@@ -15,11 +15,7 @@
       }
 
       <div class="below-image-section">
-        <div class="quantity-control">
-          <button mat-button-toggle class="decrease-button" (click)="decreaseQuantity()">-</button>
-          <span class="quantity">{{ quantity }}</span>
-          <button mat-button-toggle class="increase-button" (click)="increaseQuantity()">+</button>
-        </div>
+        <app-quantity-control></app-quantity-control>
         <mat-icon class="fav-icon" [fontIcon]="isHovered? 'favorite' : 'favorite_border'" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()" aria-hidden="false" color="warn">favorite_border</mat-icon>
       </div>
 

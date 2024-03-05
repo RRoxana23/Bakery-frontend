@@ -1,0 +1,46 @@
+.page-description,
+.single-line-field{
+  display: flex;
+  flex-direction: column;
+}
+
+.fields{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field-description{
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.sign-up{
+  display: inline-block;
+  color: #f44336;
+}
+
+.sign-up:hover{
+  color: red;
+  cursor: pointer;
+}
+
+.single-line-field{
+  flex-basis: 100%;
+  color: black
+}
+
+.new-account-description,
+.sign-up-description{
+  font-size: 0.8em;
+  align-self: center;
+  margin: 0.5em 0 1.1em 0;
+}
+
+.sign-up-description{
+  margin-top: 1.1em;
+}
+
+.login-button{
+  height: 48px;
+}

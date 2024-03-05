@@ -46,6 +46,11 @@ export class JoinPageComponent implements OnInit {
     title: 'It starts with our mission! Ready to join our Sweet Team?'
   };
 
+
+  firstName: string = "First name";
+  lastName: string ="Last name";
+  phoneNumber: string = "Phone number";
+
   cityControl = new FormControl<any | null>(null, Validators.required);
   firstNameFormControl = new FormControl('', Validators.required);
   lastNameFormControl = new FormControl('', Validators.required);

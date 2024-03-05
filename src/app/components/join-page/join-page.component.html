@@ -1,6 +1,6 @@
 <app-page-content [pageContent]="joinOurTeam" [showOrderButton]="false">
 
-  <div class="home-description">
+  <div class="page-description">
     <p>Whether you're a passionate dessert enthusiast or a master of the pastry arts, our establishment welcomes you with open arms to indulge in an impressive array of freshly-made treats, from fluffy croissants to decadent tortes and refined macarons.</p>
     <p>But more than just a place to purchase goods, we're a community of individuals dedicated to the culinary craft, eager to share our passion for authentic tastes and memorable culinary experiences.</p>
 
@@ -39,7 +39,7 @@
         </div>
         <mat-form-field color="warn">
           <mat-label>First name</mat-label>
-          <input matInput [formControl]="firstNameFormControl" [errorStateMatcher]="matcher">
+          <input matInput [formControl]="firstNameFormControl" [errorStateMatcher]="matcher"> 
           @if (firstNameFormControl.hasError('required')) {
             <mat-error>First name is required</mat-error>
           }
@@ -53,7 +53,7 @@
         </div>
         <mat-form-field color="warn">
           <mat-label>Last name</mat-label>
-          <input matInput [formControl]="lastNameFormControl" [errorStateMatcher]="matcher">
+          <input matInput [formControl]="lastNameFormControl" [errorStateMatcher]="matcher"> 
           @if (lastNameFormControl.hasError('required')) {
             <mat-error>Last name is required</mat-error>
           }
@@ -95,7 +95,7 @@
         </div>
         <mat-form-field color="warn">
           <mat-label>Enter your email</mat-label>
-          <input class matInput placeholder="firstName@gmail.com" [formControl]="email" required>
+          <input matInput placeholder="firstName@gmail.com" [formControl]="email" required>
           @if (email.invalid) {
             <mat-error>{{getErrorMessage()}}</mat-error>
           }
@@ -115,7 +115,7 @@
           <span class="upload-message">{{fileName || "No file uploaded yet."}}</span>
         </div>
       </div>
-
     </div>
+    <button mat-raised-button class="submit-button" color="warn">Submit</button>
   </div>
 </app-page-content>
