@@ -1,34 +1,47 @@
 <app-page-content [pageContent]="myAccount" [showOrderButton]="false" [centeredComponent]="true">
   <div class="page-description">
-    <div class="fields">
-      <div class="single-line-field">
-        <div class="field-description">
-          <label><b>Email Adress</b></label>
-        </div>
-        <mat-form-field color="warn">
-          <input matInput [placeholder]="emailPlaceholder" [formControl]="email" required>
-          <mat-icon matSuffix>email</mat-icon>
-          @if (email.invalid) {
-            <mat-error>{{getErrorMessageEmail()}}</mat-error>
+    <form [formGroup]="formGroup">
+
+      <div class="fields">
+          <div class="single-line-field">
+            <div class="field-description">
+              <label><b>Email Adress</b></label>
+            </div>
+            <mat-form-field color="warn">
+              <input matInput formControlName="emailFormControl" [placeholder]="emailPlaceholder" [errorStateMatcher]="matcher">
+              <mat-icon matSuffix>email</mat-icon>
+              @if (formGroup.get('emailFormControl')?.hasError('required')) {
+                <mat-error>Email is required</mat-error>
+              }
+              @if (formGroup.get('emailFormControl')?.hasError('email') && formGroup.get('emailFormControl')?.touched) {
+                <mat-error>Email is invalid</mat-error>
+              }
+            </mat-form-field>
+          </div>
+          <div class="single-line-field">
+            <div class="field-description">
+              <label><b>Password</b></label>
+            </div>
+            <mat-form-field [ngClass]="{'spacer': this.buttonText === 'Sign Up'}" color="warn">
+              <input matInput formControlName="passwordFormControl" [placeholder]="passwordPlaceholder" [type]="hide ? 'password' : 'text'" [errorStateMatcher]="matcher" (blur)="onPasswordBlur()">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              @if (formGroup.get('passwordFormControl')?.hasError('required')) {
+                <mat-error>Password is required</mat-error>
+              }
+              @if (this.isPasswordInvalid) {
+                <mat-error>Password must contain at least one uppercase letter and one digit.</mat-error>
+              }
+            </mat-form-field>
+          </div>
+          @if (!signUpClicked){
+            <mat-checkbox color="warn">Remember me</mat-checkbox>
           }
-        </mat-form-field>
       </div>
-      <div class="single-line-field">
-        <div class="field-description">
-          <label><b>Password</b></label>
-        </div>
-        <mat-form-field>
-          <mat-label>Enter your password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
-          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-        </mat-form-field>
-      </div>
-      @if (!signUpClicked){
-        <mat-checkbox color="warn">Remember me</mat-checkbox>
-      }
-    </div>
+
+    </form>
+    
     @if (!signUpClicked && !signedUp){
       <div class="new-account-description">
         <span>Don't have an account yet? </span>

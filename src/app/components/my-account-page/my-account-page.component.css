@@ -1,3 +1,7 @@
+.page-description{
+  padding: 0 8% 0 8%;
+}
+
 .page-description,
 .single-line-field{
   display: flex;
@@ -48,4 +52,8 @@
 
 .login-button{
   height: 48px;
+}
+
+.spacer{
+  margin-bottom: 1em;
 }
