@@ -12,12 +12,18 @@
 
 .decrease-button,
 .increase-button {
-  width: 35px;
   height: 35px;
+  width: 35px;
   border: 1px solid #ccc;
   border-radius: 50%;
   background-color: #fff;
+  align-self: center;
   cursor: pointer;
+}
+
+.cart-smaller-screen{
+  height: 28px;
+  width: 28px;
 }
 
 .decrease-button:hover,

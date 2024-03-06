@@ -9,16 +9,23 @@ export class SmallerScreenDirective {
   constructor(private renderer: Renderer2, private el: ElementRef) { }
 
   @HostListener('window:resize', ['$event'])
-  onWindowResize(event: Event): void {
+  onWindowResize(): void {
     this.checkWindowSize();
   }
 
   private checkWindowSize(): void {
-    const smallerScreen: boolean = window.innerWidth <= 1100;
-    if (smallerScreen) {
-      this.renderer.addClass(this.el.nativeElement, 'smallerScreen');
+    const menuSmallerScreen: boolean = window.innerWidth <= 1100;
+    const cartSmallerScreen: boolean = window.innerWidth <= 700;
+    if (menuSmallerScreen) {
+      this.renderer.addClass(this.el.nativeElement, 'menu-smallerScreen');
     } else {
-      this.renderer.removeClass(this.el.nativeElement, 'smallerScreen');
+      this.renderer.removeClass(this.el.nativeElement, 'menu-smallerScreen');
+    }
+
+    if (cartSmallerScreen) {
+      this.renderer.addClass(this.el.nativeElement, 'cart-smaller-screen');
+    } else {
+      this.renderer.removeClass(this.el.nativeElement, 'cart-smaller-screen');
     }
   }
 }

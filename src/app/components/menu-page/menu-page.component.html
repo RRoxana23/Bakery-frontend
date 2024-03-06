@@ -53,28 +53,19 @@
 </div>
 
 <div class="menu">
-
-  <div class="products-list">
-  
+  <div class="products-list"> 
     @if (this.selectedCategory == "Pastry"){
-
-      @for (product of pastry; track product.id){
-
-        <app-product [product]="product" [category]="this.selectedCategory"></app-product>
-        
+      @for (product of pastry; let i = $index; track product.id){
+        <app-product [product]="product" [category]="this.selectedCategory" [ngClass]="{'last-row': isLastRow(i)}"></app-product> 
+        <!--TO DO: logic for the last row of the products list-->
       }
     }
     @else {
-
-      @for (product of coffees; track product.id){
-
-        <app-product [product]="product" [category]="this.selectedCategory"></app-product>
-        
+      @for (product of coffees; let i = $index; track product.id){
+        <app-product [product]="product" [category]="this.selectedCategory" [ngClass]="{'last-row': isLastRow(i)}"></app-product>      
       }
     }
-
   </div>
-  
 </div>
 
 <app-follow-us></app-follow-us>

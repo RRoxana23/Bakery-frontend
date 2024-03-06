@@ -43,6 +43,10 @@
   color: #c02b0a;
 }
 
+.phone-number-prefix {
+  margin-right: 8px;
+}
+
 .file-input {
   display: none;
 }

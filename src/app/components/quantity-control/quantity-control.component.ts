@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { SmallerScreenDirective } from '../../directives/smaller-screen.directive';
 
 @Component({
   selector: 'app-quantity-control',
   standalone: true,
-  imports: [],
+  imports: [SmallerScreenDirective],
   templateUrl: './quantity-control.component.html',
   styleUrl: './quantity-control.component.css'
 })

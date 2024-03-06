@@ -1,6 +1,6 @@
-import {Component, Inject} from '@angular/core';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+import { Component, Inject } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Product } from '../../interfaces/product';
 import { MatCardModule } from '@angular/material/card';

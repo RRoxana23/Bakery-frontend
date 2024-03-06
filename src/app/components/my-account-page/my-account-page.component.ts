@@ -7,18 +7,19 @@ import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-my-account-page',
     standalone: true,
     templateUrl: './my-account-page.component.html',
     styleUrl: './my-account-page.component.css',
-    imports: [MenuBarComponent, PageContentComponent, MatFormFieldModule, FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule, MatCheckboxModule]
+    imports: [MenuBarComponent, PageContentComponent, MatFormFieldModule, FormsModule, ReactiveFormsModule, MatIconModule, MatInputModule, MatButtonModule, MatCheckboxModule]
 })
 export class MyAccountPageComponent {
 
     email = new FormControl('', [Validators.required, Validators.email]);
-    password = new FormControl('', Validators.required);
+    hide = true;
     signUp : boolean = false;
 
     emailPlaceholder : string = 'you@gmail.com';
@@ -37,14 +38,6 @@ export class MyAccountPageComponent {
           return 'Email Adress is required';
         }
 
-        return this.email.hasError('email') ? 'Not a valid email' : '';
-    }
-
-    getErrorMessagePassword() {
-        if(this.password.hasError('required')) {
-            return 'Password is required';
-        }
-    
         return this.email.hasError('email') ? 'Not a valid email' : '';
     }
 

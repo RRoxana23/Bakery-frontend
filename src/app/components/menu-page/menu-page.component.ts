@@ -6,9 +6,9 @@ import { ProductComponent } from "../product/product.component";
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FollowUsComponent } from "../follow-us/follow-us.component";
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { CommonModule } from '@angular/common';
 import { SmallerScreenDirective } from '../../directives/smaller-screen.directive';
 
@@ -129,9 +129,10 @@ export class MenuPageComponent implements OnInit, OnDestroy{
     return 'undefined';
   }
 
-  isScreenSmaller(){
-    if(this.smallerScreen)
-      return 'smallerScreen';
-    return undefined;
+  isLastRow(index: number): boolean {
+    const productsPerRow = 4; // Numărul de produse pe rând
+    const numberOfRows = Math.ceil(this.pastry.length / productsPerRow);
+    const lastRowIndex = numberOfRows * productsPerRow - 1;
+    return index >= lastRowIndex - productsPerRow + 1;
   }
 }

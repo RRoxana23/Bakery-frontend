@@ -14,7 +14,7 @@
   color: black;
 }
 
-.navbar-expand-md .navbar-nav .nav-link{
+.navbar-expand-lg .navbar-nav .nav-link{
   padding: 0px;
 }
 
@@ -95,7 +95,7 @@
   margin-right: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 
   .navbar .middle-section a,
   .navbar .right-section a {

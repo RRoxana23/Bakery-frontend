@@ -15,6 +15,11 @@
   margin-bottom: 8px;
 }
 
+.email-field{
+  display: flex;
+  flex-direction: column;
+}
+
 .sign-up{
   display: inline-block;
   color: #f44336;

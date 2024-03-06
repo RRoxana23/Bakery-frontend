@@ -7,6 +7,7 @@
         </div>
         <mat-form-field color="warn">
           <input matInput [placeholder]="emailPlaceholder" [formControl]="email" required>
+          <mat-icon matSuffix>email</mat-icon>
           @if (email.invalid) {
             <mat-error>{{getErrorMessageEmail()}}</mat-error>
           }
@@ -16,11 +17,12 @@
         <div class="field-description">
           <label><b>Password</b></label>
         </div>
-        <mat-form-field color="warn">
-          <input matInput [placeholder]="passwordPlaceholder" [formControl]="password" required>
-          @if (password.invalid) {
-            <mat-error>{{getErrorMessagePassword()}}</mat-error>
-          }
+        <mat-form-field>
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
         </mat-form-field>
       </div>
       @if (!signUpClicked){
